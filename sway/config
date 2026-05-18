@@ -19,8 +19,7 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 # Recommends: rofi-wayland
-set $rofi_cmd rofi \
-        -theme squared-everforest.rasi -terminal '$term'
+set $rofi_cmd rofi \ -terminal '$term'
 # Shows a combined list of the applications with desktop files and
 # executables from PATH.
 # TODO: add window with the next release of rofi-wayland
@@ -37,19 +36,15 @@ default_floating_border normal 0
 input * {
     xkb_layout br
 }
-
-for_window [title="Floating Window - Show Me The Key"] floating enable, sticky enable, move position 1620 0
-# NOTE TAKING
-
-bindsym $mod+Shift+n exec $term --title note_window -e /home/dy/Brain/scripts/flash-note.sh
-bindsym $mod+Shift+t exec $term --title note_window -e /home/dy/Brain/scripts/todo.sh
-
-for_window [ title="note_window" ] floating enable, resize set 800 600
+bar {
+	swaybar_command waybar
+}
+exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
-output * bg /home/dy/Pictures/1373669.jpeg fill
+output * bg /home/dy/Downloads/1373667.jpeg fill
 #
 # Example configuration:
 #
@@ -62,8 +57,8 @@ output * bg /home/dy/Pictures/1373669.jpeg fill
 # Example configuration:
 #
  exec swayidle -w \
-          timeout 30 'swaylock -f -c 000000' \
-          timeout 60 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+          timeout 120 'swaylock -f -c 000000' \
+          timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
           before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
@@ -91,7 +86,6 @@ default_border pixel 3
 #
 # Basics:
 #
-    bindsym $mod+KP_Enter exec qalculate-gtk
   # Start a terminal
     bindsym $mod+Return exec $term
 
@@ -204,6 +198,7 @@ default_border pixel 3
 #
 # Resizing containers:
 #
+
 mode "resize" {
     # left will shrink the containers width
     # right will grow the containers width
@@ -226,25 +221,5 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-# Include configs from 3 locations:
-#  - /usr/share/sway/config.d
-#  - /etc/sway/config.d
-#  - $XDG_CONFIG_HOME/sway/config.d ($HOME/.config/sway/config.d)
-#
-# If multiple directories contain the files with the same name, the later
-# directory takes precedence; `$XDG_CONFIG_HOME/sway/config.d/20-swayidle.conf`
-# will always be loaded instead of `/usr/share/sway/config.d/20-swayidle.conf`
-# or `/etc/sway/config.d/20-swayidle.conf`
-#
-# This mechanism permits overriding our default configuration per-system
-# (/etc) or per-user ($XDG_CONFIG_HOME) basis. Just create the file you
-# want to modify/override in the higher-level directory.
-#
-# For example, to disable the default bar from Fedora configs, you'll need to
-#     $ echo -n > "$HOME/.config/sway/config.d/90-bar.conf"
-#
-# Note the quoting, the $() and the arguments quoting. All the parts are equally
-# important to make the magic work. And if you want to learn the secret behind
-# the trick, it's all in the `wordexp(3)`.
-#
-include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
+bindsym $mod+Shift+s exec grimshot copy area
+bindsym Print exec grimshot save screen
