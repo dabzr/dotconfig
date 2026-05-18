@@ -1,19 +1,22 @@
 sudo pacman -Syu \
 	kitty \
 	nnn \
-	nerd-fonts \
+	tldr \
 	nwg-look \
+	nerd-fonts \
 	xdg-desktop-portal \
+	yt-dlp \
 	ffmpeg \
 	mpv \
-	tldr \
 	sway-contrib \
 	discord \
-	yt-dlp \
 	neovim \
 	neovim-lspconfig \
 	git \
-	steam
+	steam \
+	fish
+
+sudo chsh -s /usr/bin/fish
 
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay-bin.git
