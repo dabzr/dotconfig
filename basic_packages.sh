@@ -14,6 +14,7 @@ sudo pacman -Syu \
 	neovim-lspconfig \
 	git \
 	steam \
+	rofi \
 	fish
 
 sudo chsh -s /usr/bin/fish
