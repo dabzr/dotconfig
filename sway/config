@@ -42,7 +42,8 @@ bar {
 }
 
 exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-Dark'
+exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+exec nm-applet
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
