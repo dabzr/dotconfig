@@ -15,6 +15,7 @@ sudo pacman -Syu \
 	git \
 	steam \
 	rofi \
+	network-manager-applet \
 	fish
 
 sudo chsh -s /usr/bin/fish
