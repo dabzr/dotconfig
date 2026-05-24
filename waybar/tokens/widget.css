@@ -18,6 +18,7 @@
   padding: 0px 10px;
 }
 
+
 #custom-code {
   color: #89b4fa;
   padding: 0px 10px;
@@ -73,6 +74,7 @@
 #memory,
 #cpu,
 #temperature,
+#custom-brightness,
 #bluetooth {
   margin-right: 2px;
   padding: 0 8px;
