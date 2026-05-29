@@ -18,6 +18,9 @@ sudo pacman -Syu \
 	network-manager-applet \
 	fish
 
+sudo pacman -Rns foot
+
+cp 1373667.jpeg ~/Downloads
 sudo chsh -s /usr/bin/fish
 
 sudo pacman -S --needed git base-devel

@@ -26,7 +26,7 @@ exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 exec nm-applet
 
-output * bg /home/dy/Downloads/1373667.jpeg fill
+output * bg ~/Downloads/1373667.jpeg fill
 
 exec_always swaymsg "inhibit_idle open"
 exec swayidle -w \
