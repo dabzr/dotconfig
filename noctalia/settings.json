@@ -20,7 +20,9 @@
         "pinnedApps": [
             "zen",
             "discord",
-            "electron-mail"
+            "electron-mail",
+            "steam",
+            "spotify"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
@@ -114,10 +116,20 @@
                     "useCustomFont": false
                 },
                 {
-                    "colorName": "primary",
-                    "hideWhenIdle": true,
-                    "id": "AudioVisualizer",
-                    "width": 200
+                    "compactMode": false,
+                    "hideMode": "hidden",
+                    "hideWhenIdle": false,
+                    "id": "MediaMini",
+                    "maxWidth": 200,
+                    "panelShowAlbumArt": true,
+                    "scrollingMode": "hover",
+                    "showAlbumArt": true,
+                    "showArtistFirst": true,
+                    "showProgressRing": true,
+                    "showVisualizer": true,
+                    "textColor": "none",
+                    "useFixedWidth": false,
+                    "visualizerType": "wave"
                 }
             ],
             "right": [
@@ -139,6 +151,11 @@
                     "id": "NotificationHistory",
                     "showUnreadBadge": true,
                     "unreadBadgeColor": "primary"
+                },
+                {
+                    "iconColor": "none",
+                    "id": "KeepAwake",
+                    "textColor": "none"
                 },
                 {
                     "displayMode": "onhover",
@@ -399,7 +416,7 @@
         "enabled": true,
         "fadeDuration": 5,
         "lockCommand": "",
-        "lockTimeout": 10,
+        "lockTimeout": 660,
         "resumeLockCommand": "",
         "resumeScreenOffCommand": "",
         "resumeSuspendCommand": "",

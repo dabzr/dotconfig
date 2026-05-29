@@ -14,7 +14,6 @@ sudo pacman -Syu \
   neovim-lspconfig \
   git \
   steam \
-  network-manager-applet \
   fish
 
 sudo pacman -Rns foot waybar
