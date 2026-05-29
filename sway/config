@@ -6,8 +6,6 @@ set $up k
 set $right l
 
 set $term kitty
-set $rofi_cmd rofi -terminal '$term'
-set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
 for_window [title="^.*"] title_format ""
 default_border normal 0
@@ -18,9 +16,21 @@ input * {
     xkb_layout br
 }
 
-bar {
-	swaybar_command waybar
-}
+#bar {
+#	swaybar_command waybar
+#}
+
+exec qs -c noctalia-shell
+
+set $ipc qs -c noctalia-shell ipc call
+bindsym $mod+d exec $ipc launcher toggle
+bindsym $mod+Ctrl+s exec $ipc controlCenter toggle
+bindsym $mod+comma exec $ipc settings toggle
+bindsym --locked XF86AudioRaiseVolume exec $ipc volume increase
+bindsym --locked XF86AudioLowerVolume exec $ipc volume decrease
+bindsym --locked XF86AudioMute exec $ipc volume muteOutput
+bindsym --locked XF86MonBrightnessUp exec $ipc brightness increase
+bindsym --locked XF86MonBrightnessDown exec $ipc brightness decrease
 
 exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 exec gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
@@ -31,19 +41,11 @@ output * bg ~/Downloads/1373667.jpeg fill
 for_window [app_id="zen" title="^Picture-in-Picture$"] \
     floating enable, move position 50 450, sticky enable
 
-exec_always swaymsg "inhibit_idle open"
-exec swayidle -w \
-          timeout 120 'swaylock -f -c 000000' \
-          timeout 300 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-          before-sleep 'swaylock -f -c 000000'
-
 smart_borders on
 default_border pixel 3
 
-	bindsym $mod+p exec swaylock 
 	bindsym $mod+Return exec $term
 	bindsym $mod+Shift+q kill
-	bindsym $mod+d exec $menu
 
     	floating_modifier $mod normal
     	bindsym $mod+Shift+c reload

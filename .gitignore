@@ -6,11 +6,11 @@
 !kitty/**
 !sway/
 !sway/**
-!waybar/
-!waybar/**
 !rofi/
 !rofi/**
 !fish/
 !fish/**
 !nvim/
 !nvim/**
+!noctalia/
+!noctalia/**
