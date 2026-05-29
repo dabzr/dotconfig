@@ -12,3 +12,5 @@
 !rofi/**
 !fish/
 !fish/**
+!nvim/
+!nvim/**
