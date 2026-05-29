@@ -23,10 +23,13 @@ bar {
 }
 
 exec gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
-exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+exec gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3-dark'
 exec nm-applet
 
 output * bg ~/Downloads/1373667.jpeg fill
+
+for_window [app_id="zen" title="^Picture-in-Picture$"] \
+    floating enable, move position 50 450, sticky enable
 
 exec_always swaymsg "inhibit_idle open"
 exec swayidle -w \

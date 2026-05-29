@@ -4,7 +4,7 @@ sudo pacman -Syu \
 	tldr \
 	nwg-look \
 	nerd-fonts \
-	xdg-desktop-portal \
+	adw-gtk-theme \
 	yt-dlp \
 	ffmpeg \
 	mpv \
