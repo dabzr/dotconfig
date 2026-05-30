@@ -308,7 +308,7 @@
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
         "dockType": "floating",
-        "enabled": true,
+        "enabled": false,
         "floatingRatio": 1.5,
         "groupApps": false,
         "groupClickAction": "cycle",

@@ -6,8 +6,6 @@
 !kitty/**
 !sway/
 !sway/**
-!rofi/
-!rofi/**
 !fish/
 !fish/**
 !nvim/
