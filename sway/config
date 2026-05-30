@@ -16,9 +16,8 @@ input * {
     xkb_layout br
 }
 
-#bar {
-#	swaybar_command waybar
-#}
+exec_always dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec_always systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 exec qs -c noctalia-shell
 
