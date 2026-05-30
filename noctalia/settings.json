@@ -107,6 +107,16 @@
             ],
             "left": [
                 {
+                    "colorizeDistroLogo": false,
+                    "colorizeSystemIcon": "none",
+                    "colorizeSystemText": "none",
+                    "customIconPath": "",
+                    "enableColorization": true,
+                    "icon": "noctalia",
+                    "id": "ControlCenter",
+                    "useDistroLogo": true
+                },
+                {
                     "clockColor": "none",
                     "customFont": "",
                     "formatHorizontal": "HH:mm ddd, MMM dd",
@@ -133,17 +143,6 @@
                 }
             ],
             "right": [
-                {
-                    "blacklist": [
-                    ],
-                    "chevronColor": "none",
-                    "colorizeIcons": false,
-                    "drawerEnabled": true,
-                    "hidePassive": false,
-                    "id": "Tray",
-                    "pinned": [
-                    ]
-                },
                 {
                     "hideWhenZero": false,
                     "hideWhenZeroUnread": false,
@@ -187,14 +186,15 @@
                     "usePadding": false
                 },
                 {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": true,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": true
+                    "blacklist": [
+                    ],
+                    "chevronColor": "none",
+                    "colorizeIcons": false,
+                    "drawerEnabled": true,
+                    "hidePassive": false,
+                    "id": "Tray",
+                    "pinned": [
+                    ]
                 }
             ]
         }
@@ -630,6 +630,34 @@
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
+            {
+                "appearance": "dark",
+                "colorScheme": "Ayu",
+                "darkMode": true,
+                "generationMethod": "tonal-spot",
+                "paletteColors": [
+                    "#e6b450",
+                    "#aad94c",
+                    "#39bae6",
+                    "#d95757"
+                ],
+                "path": "/home/dy/Downloads/1373667.jpeg",
+                "useWallpaperColors": false
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Ayu",
+                "darkMode": true,
+                "generationMethod": "tonal-spot",
+                "paletteColors": [
+                    "#e6b450",
+                    "#aad94c",
+                    "#39bae6",
+                    "#d95757"
+                ],
+                "path": "/home/dy/Downloads/wp2058314-bjork-wallpapers.jpg",
+                "useWallpaperColors": false
+            }
         ],
         "fillColor": "#000000",
         "fillMode": "crop",
