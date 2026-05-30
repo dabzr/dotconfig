@@ -24,7 +24,7 @@ exec qs -c noctalia-shell
 
 set $ipc qs -c noctalia-shell ipc call
 bindsym $mod+d exec $ipc launcher toggle
-bindsym $mod+Shift+d exec $ipc controlCenter toggle
+bindsym --release Super_L exec $ipc controlCenter toggle
 bindsym $mod+c exec $ipc settings toggle
 bindsym --locked XF86AudioRaiseVolume exec $ipc volume increase
 bindsym --locked XF86AudioLowerVolume exec $ipc volume decrease
